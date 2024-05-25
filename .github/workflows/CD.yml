@@ -7,7 +7,7 @@ on:
     branches: [ main ] # main branch로 push 될 때 실행됩니다.
 
 env:
-  S3_BUCKET_NAME: now-sopt-bucket-seoul
+  S3_BUCKET_NAME: nowsoptbucket
 
 jobs:
   build:
@@ -70,7 +70,7 @@ jobs:
         aws-region: ap-southeast-2
         
     - name: Upload to S3
-      run: aws s3 cp --region ap-northeast-2 ./now-sopt.zip s3://$S3_BUCKET_NAME/
+      run: aws s3 cp --region us-east-1 ./now-sopt.zip s3://$S3_BUCKET_NAME/
       
     - name: Deploy
       env:
