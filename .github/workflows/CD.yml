@@ -82,4 +82,4 @@ jobs:
         --deployment-group-name now-sopt-deploy
         --file-exists-behavior OVERWRITE 
         --s3-location bucket=$S3_BUCKET_NAME,bundleType=zip,key=now-sopt.zip
-        --region ap-northeast-2
+        --region ap-southeast-2
